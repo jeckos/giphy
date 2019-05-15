@@ -1,0 +1,88 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+	color: $text;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+
+.header{
+	background: #354b5e;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+	&_search{
+		margin-left: auto;
+	}
+}
+.logo{
+	display: flex;
+	align-items: center;
+	&_link{
+		display: flex;
+		font-size: 24px;
+		color: #ffffff;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none !important;
+		&:hover{
+			color: #dcddd8;
+		}
+	}
+}
+
+.gifs_card{
+	img{
+		width: 100%;
+	}
+}
+
+
+.company-enter-active {
+	transition: all 300ms ease-out;
+}
+.company-leave-active {
+	transition: all 200ms ease-in;
+	position: absolute;
+	z-index: 0;
+}
+.company-enter, .company-leave-to {
+	opacity: 0;
+}
+.company-enter {
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+
+.v-lazy-image {
+	filter: blur(10px);
+	transition: filter 0.7s;
+}
+.v-lazy-image-loaded {
+	filter: blur(0);
+}
+
+@import "media"; // Always at the end
