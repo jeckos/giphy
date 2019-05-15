@@ -3,19 +3,21 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2>{{ gif.title }}</h2>
-          <img
-            :src="
+          <div class="gif_one">
+            <h2>{{ gif.title }}</h2>
+            <img
+                    :src="
               gif.images.original.webp
                 ? gif.images.original.webp
                 : gif.images.original.url
             "
-            alt=""
-          /><br />
-          <router-link
-            :to="{ name: 'Profile', params: { id: gif.username } }"
+                    alt=""
+            /><br />
+            <router-link
+                    :to="{ name: 'Profile', params: { id: gif.username } }"
             >{{ gif.username }}</router-link
-          >
+            >
+          </div>
         </div>
       </div>
     </div>

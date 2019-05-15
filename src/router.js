@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Index.vue'
 import gifOne from './views/gifOne.vue'
-import Profile from './views/profile.vue'
+import Profile from './views/Profile.vue'
 
 Vue.use(Router)
 

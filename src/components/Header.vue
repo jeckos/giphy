@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <app-logo @click.native="home">Giphy</app-logo>
-                <app-input class="header_search" v-model="search" @input="searchGifs($event)"/>
+                <app-input class="header_search" placeholder="Search" v-model="search" @input="searchGifs($event)"/>
             </div>
         </div>
     </div>
